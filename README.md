@@ -1,26 +1,36 @@
-Установка и настрока Vosk сервера
+Установка и настрока Vosk-сервера
 
-Установить библитеку для распознавания речи “Воск”
-1. Установить python3 и pip3
+Варианты запуска Vosk-сервера:
+1. Запустить сервер в Docker
+1.1. Из папки ru-big-model
+- загрузить модели download.sh
+- запустить build.sh далее run.sh
 
-2. Выполнить следующие команды
+1.2 Из папки ru-big-model_v2
+- запустить build.sh далее run.sh
+
+1.3 Из папки ru-small-model
+- запустить build.sh далее run.sh
+
+2. Запустить сервер в локально 
+- установить python3 и pip3
+- выполнить следующие команды
     pip3 install vosk
-
     sudo apt update
     sudo apt install ffmpeg
 
     Проверить установилась ли программа vosk, выполнив команду в консоли
     vosk-transcriber -h
+2.1 Из папки ru-small-model
+- загрузить модели download.sh
+- запустить run_server.sh
 
-3. Скачать языковую модель для русского языка
-https://alphacephei.com/vosk/models
-vosk-model-ru-0.42 (большая модель) и
-vosk-model-small-ru-0.22 (маленькая модель). 
-Модель положить в папку /storage/app/voskModel
+2.2 Из папки ru-big-model
+- загрузить модели download.sh
+- запустить run_server.sh
+
 
 ВНИМАНИЕ!!!
 Большим моделям требуется до 16 ГБ оперативной памяти.
 
 
-Запустить сервер
-1. Запустить download.sh или установить на docker. Для запуска в docker надо запустить build.sh далее run.sh
